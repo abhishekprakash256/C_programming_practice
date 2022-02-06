@@ -699,6 +699,10 @@
 - be careful with local and global reference of the variable.
 - we can use "extern <data_type> <variable_name>"
 
+### Memory location 
+
+- the location at which the values are stored and then values are referenced from it.
+
 ## Pointers 
 
 ### Void Pointers
