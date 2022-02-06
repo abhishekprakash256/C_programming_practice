@@ -16,9 +16,26 @@
 ### Basic structure of C program
 
 - Preprocessors are there to include in the files like a header files
+
 - int main() is a function that is defined there, this is the main function
+
 - int is return type of the function
+
 - return 0 if everything looks good
+
+- snippets 
+
+  ```c
+  #include<stdio.h>
+  #include<stdlib.h>
+  
+  //the functon is not returning anything
+  void say_hi()
+  {
+      //do something
+      
+  }
+  ```
 
 ### Terms in the C program
 
@@ -33,24 +50,113 @@
 ### Variables and data types
 
 - Data type defines what kind of data will be stored.
+
 - Basic data type in C - int, double, char, float
+
+- For char use single quotation marks
+
 - Derived data type -array, pointer, structure, union
+
 - Enumeration data type - emum
+
 - void data type - void
+
 - sizeof(), this predefined function can be used to check for the size of a variable
+
 - float is 32 bit representation of a number, 6-7 points number
+
+- Snippets 
+
+  ```c
+  #include<stdio.h>
+  #include<stdlib.h>
+  
+  //the main function 
+  
+  int main()
+  {
+  	//store in the char variable
+  	//make a array 
+  	char first[] = "Leo";
+  	char last[] = "Messi";
+  	int number = 10;
+      printf("%s %s is the best number %d in the world\n", first, last, number);
+  
+  	return 0;
+  }
+  ```
+
+### Format specifiers
+
+- %d for integers
+- %s for strings
+- %f for decimal number
+
+### Getting the user input -
+
+- use the scanf() , to get the user input, with type and variable pointer.
+
+- use %lf to get the double data
+
+- %c for getting the character
+
+- getting the strings %c and the variable name , only gonna grab till first space 
+
+  ```c
+  char name[20];
+  scanf("%s",name);
+  printf("Your name is %s\n" name);
+  ```
+
+- use fget(variable,20) , variable name and total character we want , It will print out the 
+
+  ```c
+  char name[20];
+  fget(name,20, stdin);
+  printf("Your name is %s\n" name);
+  ```
 
 ### Operators in C 
 
 - An operator that is used to perform certain operation
   - Types of operator in C - Arithmetic operator, logical operator, Relational Operator , Bitwise Operator, Assignment Operator
+  
   - Relational Operators - ==, != , > , < ,>=,<=
+  
   - Logical Operator - &&, ||, !
+  
   - Bitwise operator - Checks for the value in the binary and then make the operation on them, Example a= 2, b= 3, a =10 ,b =11(in binary), then && operation between them, 10 && 11-> 10 that is 2 in decimal numbers
+  
   - Bitwise operator - a^b , a exclusive or b , if true only if one of them is true neither both nor one. only one should be true at the time. XOR
-  -  Assignment Operator -  =, +=,-=,*=,/=
+  
+  - Assignment Operator -  =, +=,-=,*=,/=
+  
   - Misc Operators - sizeof(), &- address of the variable, * pointer of the variable, ?: conditional operator.
+  
   - Precedence and Associativity of the operator are also important 
+  
+  - float gives float back even with int numbers
+  
+  - Snippets
+  
+    ```c
+    #include<stdio.h>
+    #include<stdlib.h> 
+    
+    int main()
+    {
+        printf("%f\n", 6+5.0);
+    
+    	return 0;
+    }
+    ```
+
+### Math functions 
+
+- pow(2,3)  , 2 to power 3
+- sqrt(36) , square root
+- ceil(36.356) , round function, next bigger round
+- floor(23.676), round to small value
 
 ### Format Specifier 
 
@@ -113,7 +219,7 @@
 
 - Switch expression must be an int or char
 
-- case value must be an int or char
+- case value must be an int or char important
 
 - case must be inside switch
 
@@ -256,6 +362,25 @@
   - with argument and without return type
   - with argument and with return type
 
+- Snippets 
+
+  ```python
+  #include<stdio.h>
+  #include<stdlib.h>
+  
+  int cube(num)
+  {
+  	int cube = num*num*num;
+  	return cube;
+  }
+  int main(){
+  	printf("the cube of number is %d\n", cube(2));
+  	return 0;
+  }
+  ```
+
+  
+
 ### Array in C
 
 - An array is a collection of data types of same types
@@ -326,14 +451,29 @@
 
 ### Array and Pointers in C
 
+- Array is container that store the information of same type 
+
+  ```c
+  int my_array[] = {1,23,43,5,677};
+  char my_array_0 = "abhi";
+  my_arrar[5] = 8;
+  ```
+
+- access the elements by index points
+
 - Arithmetic operation- (the operation will done in the size of a)
+  
   - ++ 
   - --
   - +
   - -
+  
 - Let's define a array and make a pointer to that 
+
 - that pointer will store the address of array[0], the first element
+
 - *(&array[10]) - we can dereference the pointer
+
 - we can do arithmetic operation with pointer but not with array constant
 
 ### Call by value and reference
@@ -407,7 +547,18 @@
   ```
 
 - This will make a direct array like "abhishek"
+
 - puts() is a method that can print the value of string directly 
+
+### Constants 
+
+- The value can't be changed later 
+
+  ```c
+  const int num = 5; // can't modify it later, give  upper case name to them
+  ```
+
+  
 
 ### String function in C
 
@@ -585,4 +736,3 @@
 - to include a file mostly include the ".h" extension
 - #include"file_name.h" (for file)
 - To include a file use include"file_name.c"
-
