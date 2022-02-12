@@ -53,7 +53,19 @@
 
 - Basic data type in C - int, double, char, float
 
-- For char use single quotation marks
+  - Int data types
+  - signed and unsigned are two data types in integers where range changes 
+  - we can use modifier in front of the integer to make it have only the positive values
+  - use #inlcude<limits.h>  for getting the limits of the integer, int INT_MAX , %u is used to print the value
+  - long integer
+  - long long integer , the data have the greater byte value
+  - Float 4 bytes - 32 bits
+  - Double 8 bytes - 64 bits
+  - Long Double 12 bytes - 96 bytes
+
+-  For char use single quotation marks
+
+  - size is 1 byte
 
 - Derived data type -array, pointer, structure, union
 
@@ -86,11 +98,26 @@
   }
   ```
 
+### Range exceeding for the data types
+
+- They will repeat the zero value
+
 ### Format specifiers
 
 - %d for integers
-- %s for strings
+- %c for character
+- %s for strings of characters
 - %f for decimal number
+- &u for unsigned integer
+- %ld for signed long integer
+- %ld for unsigned long integer
+- %lld for the signed long integer 
+- %llu for the unsigned long integer
+
+### The scope of the variable 
+
+- the scope of the variable is within the function if that is defined inside
+- The scope is also decided by the parenthesis system in C 
 
 ### Getting the user input -
 
@@ -740,3 +767,14 @@
 - to include a file mostly include the ".h" extension
 - #include"file_name.h" (for file)
 - To include a file use include"file_name.c"
+
+
+
+- Lec 13
+
+### Links 
+
+```
+https://www.youtube.com/watch?v=1Dkfmf4PmvQ&list=PLBlnK6fEyqRhX6r2uhhlubuF5QextdCSM&index=13
+```
+
